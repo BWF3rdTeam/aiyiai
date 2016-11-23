@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">YQZhuangXiu</string>
+<<<<<<< HEAD
     <string name="main">首页</string>
     <string name="owner">业主说</string>
     <string name="msg">消息</string>
@@ -12,4 +13,12 @@
     <string name="xiaoguotu">效果图</string>
     <string name="zizhuxiadan">自助下单</string>
     <string name="sheji">设计/量房</string>
+=======
+    <string name="decoration_company_title">装修公司</string>
+    <string name="new_house">新房整装</string>
+    <string name="look_site">看现场</string>
+    <string name="fitment_live">装修直播</string>
+    <string name="site_playing">工地直播</string>
+    <string name="yiqi_group">一起团队</string>
+>>>>>>> 1055b14be9b35f09b2a3d4ee9761e756f5c044a4
 </resources>
