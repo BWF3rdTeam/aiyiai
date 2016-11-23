@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">YQZhuangXiu</string>
+    <string name="decoration_company_title">装修公司</string>
+    <string name="new_house">新房整装</string>
+    <string name="look_site">看现场</string>
+    <string name="fitment_live">装修直播</string>
+    <string name="site_playing">工地直播</string>
+    <string name="yiqi_group">一起团队</string>
 </resources>
