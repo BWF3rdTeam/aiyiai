@@ -10,7 +10,7 @@ import android.view.WindowManager;
  * Created by Administrator on 2016/11/23.
  */
 
-public abstract class BaseActivity<T> extends FragmentActivity{
+public abstract class BaseActivity extends FragmentActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

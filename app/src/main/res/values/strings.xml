@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">YQZhuangXiu</string>
+    <string name="main">首页</string>
+    <string name="owner">业主说</string>
+    <string name="msg">消息</string>
+    <string name="mine">我的</string>
+    <string name="zhuangxiu">装修公司</string>
+    <string name="tongcheng">同城活动</string>
+    <string name="xueyuan">装修学院</string>
+    <string name="yusuan">装修预算</string>
+    <string name="jiancai">建材家居</string>
+    <string name="xiaoguotu">效果图</string>
+    <string name="zizhuxiadan">自助下单</string>
+    <string name="sheji">设计/量房</string>
 </resources>
