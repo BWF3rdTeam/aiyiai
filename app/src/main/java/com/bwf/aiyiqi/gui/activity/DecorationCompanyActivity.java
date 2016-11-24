@@ -89,6 +89,9 @@ public class DecorationCompanyActivity extends BaseActivity implements Decoratio
                 decorationCompanyPresenter.loadDatas();
             }
         });
+        pagerAdapter = new DecorationCompanyViewPagerAdapter(this, views);
+        viewPagerDecorationCompany.setAdapter(pagerAdapter);
+
     }
 
     @Override
@@ -106,8 +109,9 @@ public class DecorationCompanyActivity extends BaseActivity implements Decoratio
             View view = inflater.inflate(R.layout.view_simpledraweeview, null);
             views.add(view);
         }
-        pagerAdapter = new DecorationCompanyViewPagerAdapter(this, views, responseFlashView.getData());
-        viewPagerDecorationCompany.setAdapter(pagerAdapter);
+
+        pagerAdapter.addDatas(responseFlashView.getData());
+
     }
 
     @Override

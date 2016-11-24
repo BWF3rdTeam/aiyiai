@@ -1,21 +1,28 @@
 package com.bwf.aiyiqi.gui.adapter;
 
-import android.support.v4.view.PagerAdapter;
-import android.view.View;
+import android.content.Context;
+import android.view.ViewGroup;
+
+import com.bwf.aiyiqi.gui.adapter.baseadapters.MyBasePagerAdapter;
 
 /**
  * Created by Administrator on 2016/11/24.
  */
 
-public class MainPagerAdapter extends PagerAdapter {
+public class MainPagerAdapter extends MyBasePagerAdapter {
 
-    @Override
-    public int getCount() {
-        return 0;
+    public MainPagerAdapter(Context context) {
+        super(context);
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
-        return false;
+    public int getCount() {
+        return Integer.MAX_VALUE;
+    }
+
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+
+        return null;
     }
 }

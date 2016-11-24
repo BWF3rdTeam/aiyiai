@@ -14,11 +14,26 @@ import java.util.List;
 public abstract class MyBasePagerAdapter<T> extends PagerAdapter{
     protected List<T> datas;
     protected LayoutInflater inflater;
-    protected List<View> views;
-    public MyBasePagerAdapter(Context context, List<View> views, List<T> datas) {
+    private Context context;
+    public MyBasePagerAdapter(Context context) {
         this.inflater = LayoutInflater.from(context);
-        this.datas = datas;
-        this.views = views;
+        this.context=context;
+    }
+    protected  Context getContext(){
+        return context;
+    }
+    public void setDatas(List<T> datas) {
+        this.datas.clear();
+        this.datas.addAll(datas);
+        notifyDataSetChanged();
+    }
+    public void addDatas(List<T> datas) {
+        this.datas.addAll(datas);
+        notifyDataSetChanged();
+    }
+    public void clearDatas( ){
+        this.datas.clear();
+        notifyDataSetChanged();
     }
     @Override
     public int getCount() {
@@ -29,3 +44,4 @@ public abstract class MyBasePagerAdapter<T> extends PagerAdapter{
         return view == object;
     }
 }
+
