@@ -25,8 +25,8 @@ public class PagerDotIndicator {
         this.inflater = LayoutInflater.from(context);
         this.viewPager = viewPager;
         this.indicatorContainer = indicatorContainer;
-        this.normalDotRes = R.drawable.home_page_controls_nor;
-        this.selectedDotRes = R.drawable.home_page_controls_hl;
+        this.normalDotRes = R.mipmap.home_page_controls_nor;
+        this.selectedDotRes = R.mipmap.home_page_controls_hl;
         viewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {

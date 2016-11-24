@@ -1,4 +1,4 @@
-package com.bwf.aiyiqi.view;
+package com.bwf.aiyiqi.gui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

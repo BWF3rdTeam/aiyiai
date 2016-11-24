@@ -1,19 +1,16 @@
 package com.bwf.aiyiqi.gui.activity;
 
-import android.os.Bundle;
-
+import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.gui.activity.baseactivitys.BaseActivity;
 
-public class MainActivity extends BaseActivity {
+/**
+ * Created by Administrator on 2016/11/24.
+ */
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+public class YiqiGroupActivity extends BaseActivity {
     @Override
     protected int getViewResId() {
-        return 0;
+        return R.layout.subview_yiqigroup;
     }
 
     @Override
