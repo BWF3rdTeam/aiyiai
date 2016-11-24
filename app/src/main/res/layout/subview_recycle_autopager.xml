@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="250dp">
+    android:layout_height="250dp"
+    >
+    <android.support.v4.view.ViewPager
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/main_autoviewpager">
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:gravity="right"
+        android:id="@+id/main_autoviewpager_linear"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="10dp"
+        android:layout_alignBottom="@id/main_autoviewpager">
+    </LinearLayout>
+</RelativeLayout>
 
-</android.support.v4.view.ViewPager>
+

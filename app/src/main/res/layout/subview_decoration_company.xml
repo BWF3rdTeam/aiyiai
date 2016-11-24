@@ -40,7 +40,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/new_house_icon" />
+                android:src="@mipmap/new_house_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/old_house_icon" />
+                android:src="@mipmap/old_house_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/look_site_playing_icon" />
+                android:src="@mipmap/look_site_playing_icon" />
 
             <TextView
                 android:layout_width="wrap_content"

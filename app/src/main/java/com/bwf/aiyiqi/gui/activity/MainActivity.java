@@ -11,10 +11,10 @@ import android.widget.LinearLayout;
 
 import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.gui.activity.baseactivitys.BaseActivity;
-import com.bwf.aiyiqi.gui.fragment.basefragments.MainFragment;
-import com.bwf.aiyiqi.gui.fragment.basefragments.MineFragment;
-import com.bwf.aiyiqi.gui.fragment.basefragments.MsgFragment;
-import com.bwf.aiyiqi.gui.fragment.basefragments.OwnerFragment;
+import com.bwf.aiyiqi.gui.fragment.MainFragment;
+import com.bwf.aiyiqi.gui.fragment.MineFragment;
+import com.bwf.aiyiqi.gui.fragment.MsgFragment;
+import com.bwf.aiyiqi.gui.fragment.OwnerFragment;
 
 import java.util.ArrayList;
 import java.util.List;

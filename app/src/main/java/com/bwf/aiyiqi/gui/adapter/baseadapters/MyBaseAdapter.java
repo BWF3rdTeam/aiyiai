@@ -13,8 +13,8 @@ import java.util.List;
 
 public abstract class MyBaseAdapter<T> extends BaseAdapter {
     private List<T>datas;
-    private LayoutInflater inflater;
     private Context context;
+    protected LayoutInflater inflater;
 
     public MyBaseAdapter(Context context) {
         this.context = context;
@@ -35,6 +35,12 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
         this.datas.clear();
         notifyDataSetChanged();
     }
+
+    @Override
+    public T getItem(int position) {
+        return datas.get(position);
+    }
+
     protected  Context getContext(){
         return context;
     }

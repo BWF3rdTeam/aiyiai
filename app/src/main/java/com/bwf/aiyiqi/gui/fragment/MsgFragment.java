@@ -1,6 +1,7 @@
-package com.bwf.aiyiqi.gui.fragment.basefragments;
+package com.bwf.aiyiqi.gui.fragment;
 
 import com.bwf.aiyiqi.R;
+import com.bwf.aiyiqi.gui.fragment.basefragments.BaseFragment;
 
 /**
  * Created by Administrator on 2016/11/23.

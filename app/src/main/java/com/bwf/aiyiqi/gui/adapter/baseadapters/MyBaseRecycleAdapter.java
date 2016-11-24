@@ -14,8 +14,8 @@ import java.util.List;
 
 public abstract class MyBaseRecycleAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     private List<T> datas;
-    private LayoutInflater inflater;
     private Context context;
+    protected LayoutInflater inflater;
 
     public MyBaseRecycleAdapter(Context context) {
         this.context = context;
@@ -53,8 +53,8 @@ public abstract class MyBaseRecycleAdapter<T> extends RecyclerView.Adapter<Recyc
     }
 
 
-    class BaseHolder extends RecyclerView.ViewHolder {
-        BaseHolder(View view) {
+    protected class BaseHolder extends RecyclerView.ViewHolder {
+        public BaseHolder(View view) {
             super(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override

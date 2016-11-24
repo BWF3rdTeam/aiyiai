@@ -10,9 +10,9 @@ import java.util.List;
  * Created by Administrator on 2016/11/23.
  */
 
-public abstract class MyBasePagerAdapter extends FragmentPagerAdapter {
+public abstract class MyBaseFragmentPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> list;
-    public MyBasePagerAdapter(FragmentManager fm,List<Fragment> list) {
+    public MyBaseFragmentPagerAdapter(FragmentManager fm, List<Fragment> list) {
         super(fm);
         this.list=list;
     }

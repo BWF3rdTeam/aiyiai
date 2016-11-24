@@ -1,15 +1,16 @@
-package com.bwf.aiyiqi.gui.fragment.basefragments;
+package com.bwf.aiyiqi.gui.fragment;
 
 import com.bwf.aiyiqi.R;
+import com.bwf.aiyiqi.gui.fragment.basefragments.BaseFragment;
 
 /**
  * Created by Administrator on 2016/11/23.
  */
 
-public class MineFragment extends BaseFragment {
+public class OwnerFragment extends BaseFragment {
     @Override
     protected int getViewResId() {
-        return R.layout.mine_fragment;
+        return R.layout.owner_fragment;
     }
 
     @Override
