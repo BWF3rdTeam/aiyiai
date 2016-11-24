@@ -11,10 +11,15 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.bwf.aiyiqi.R;
 import com.bwf.aiyiqi.entity.ResponseMainArticles;
+import com.bwf.aiyiqi.entity.ResponseMainPager;
+import com.bwf.aiyiqi.gui.adapter.MainPagerAdapter;
 import com.bwf.aiyiqi.gui.adapter.MainRecycleAdapter;
 import com.bwf.aiyiqi.gui.fragment.basefragments.BaseFragment;
 import com.bwf.aiyiqi.mvp.presenter.Impl.MainRecyclePresenterImpl;
 import com.bwf.aiyiqi.mvp.view.MainRecycleView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +31,8 @@ import butterknife.ButterKnife;
 public class MainFragment extends BaseFragment implements MainRecycleView,MainRecycleAdapter.OnItemClickListener{
     @BindView(R.id.main_recycleview)
     RecyclerView mainRecycleview;
-    private MainRecycleAdapter adapter;
+    private MainRecycleAdapter recycleAdapter;
+    private MainPagerAdapter pagerAdapter;
     private MainRecyclePresenterImpl presenter;
     @Override
     protected int getViewResId() {
@@ -35,9 +41,9 @@ public class MainFragment extends BaseFragment implements MainRecycleView,MainRe
 
     @Override
     protected void initViews() {
-        adapter=new MainRecycleAdapter(getActivity());
-        adapter.setOnItemClickListener(this);
-        mainRecycleview.setAdapter(adapter);
+        recycleAdapter =new MainRecycleAdapter(getActivity());
+        recycleAdapter.setOnItemClickListener(this);
+        mainRecycleview.setAdapter(recycleAdapter);
     }
 
     @Override
@@ -74,7 +80,7 @@ public class MainFragment extends BaseFragment implements MainRecycleView,MainRe
     public void showMainSuccess(String response) {
         Toast.makeText(getActivity(), "haha", Toast.LENGTH_SHORT).show();
         ResponseMainArticles articles= JSON.parseObject(response,ResponseMainArticles.class);
-        adapter.addDatas(articles.getData());
+        recycleAdapter.addDatas(articles.getData());
     }
 
     @Override
@@ -85,7 +91,14 @@ public class MainFragment extends BaseFragment implements MainRecycleView,MainRe
 
     @Override
     public void showMainPagersSuccess(String response) {
-
+        ResponseMainPager responseMainPager= JSON.parseObject(response,ResponseMainPager.class);
+        int size=responseMainPager.getData().size();
+        List<View>views=new ArrayList<>();
+        for (int i = 0; i <size ; i++) {
+            views.add(inflater.inflate(R.layout.main_autopager,null));
+        }
+        pagerAdapter=new MainPagerAdapter(getActivity(),views);
+        pagerAdapter.addDatas(responseMainPager.getData());
     }
 
     @Override
