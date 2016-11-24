@@ -1,12 +1,9 @@
-package com.bwf.aiyiqi.view;
+package com.bwf.aiyiqi.gui.view;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Scroller;
 
 import java.lang.reflect.Field;
@@ -49,32 +46,6 @@ public class AutoScrollViewPager extends ViewPager {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void setAdapter(final PagerAdapter adapter) {
-        super.setAdapter(new PagerAdapter() {
-            @Override
-            public int getCount() {
-                return Integer.MAX_VALUE;
-            }
-
-            @Override
-            public boolean isViewFromObject(View view, Object object) {
-                return adapter.isViewFromObject(view, object);
-            }
-
-            @Override
-            public Object instantiateItem(ViewGroup container, int position) {
-                return adapter.instantiateItem(container, position);
-            }
-
-            @Override
-            public void destroyItem(ViewGroup container, int position, Object object) {
-                adapter.destroyItem(container, position, object);
-            }
-        });
-        startAutoScroll();
     }
 
     private void startAutoScroll() {
