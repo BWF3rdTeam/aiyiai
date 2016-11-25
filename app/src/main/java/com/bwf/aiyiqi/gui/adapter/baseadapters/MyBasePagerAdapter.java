@@ -5,6 +5,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
  */
 
 public abstract class MyBasePagerAdapter<T> extends PagerAdapter{
-    protected List<T> datas;
+    protected List<T> datas=new ArrayList<>();
     protected LayoutInflater inflater;
     private Context context;
     public MyBasePagerAdapter(Context context) {

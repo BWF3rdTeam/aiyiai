@@ -5,6 +5,7 @@
     android:layout_height="wrap_content">
     <include layout="@layout/subview_recycle_autopager"></include>
     <LinearLayout
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -44,12 +45,14 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
         <CheckedTextView
+            android:drawablePadding="5dp"
             android:id="@+id/main_recycleview_ctv5"
             android:layout_width="0dp"
             android:layout_weight="1"

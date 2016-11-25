@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="hahaha"/>
+            android:text="这里换成二维码"/>
     </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"

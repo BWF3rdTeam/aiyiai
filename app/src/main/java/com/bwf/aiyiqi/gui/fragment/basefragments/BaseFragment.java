@@ -12,9 +12,11 @@ import android.view.ViewGroup;
  */
 
 public abstract class BaseFragment extends Fragment {
+    protected LayoutInflater inflater;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        this.inflater=inflater;
         return inflater.inflate(getViewResId(),null);
 
     }

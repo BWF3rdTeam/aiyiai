@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
         android:id="@+id/subview_article_linear"
@@ -27,6 +29,7 @@
             android:text="test" />
     </LinearLayout>
     <LinearLayout
+        android:padding="15dp"
         android:id="@+id/subview_note_linear"
         android:visibility="gone"
         android:layout_width="match_parent"
@@ -36,36 +39,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageView
+            <com.facebook.drawee.view.SimpleDraweeView
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_margin="5dp"
+                fresco:roundAsCircle="true"
                 android:id="@+id/recycle_user_imv" />
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:id="@+id/recycle_user_lasttime">
+               >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="hahaha"
-                    android:id="@+id/recycle_user_name" />
+                    android:layout_marginBottom="5dp"
+                    android:text="这里是用户名"
+                    android:id="@+id/recycle_user_name"
+                    android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="xixixi"/>
+                    android:text="最近发表的时间"
+                    android:id="@+id/recycle_user_lasttime"/>
             </LinearLayout>
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/recycle_user_follow" />
+            <CheckedTextView
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycle_user_follow"
+                android:text="@string/follow"
+                android:textAlignment="center"
+                android:textColor="@color/main_switch_green"
+                android:drawableTop="@mipmap/ic_add_attention_tab"/>
         </LinearLayout>
         <TextView
             android:id="@+id/recycle_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="gegege"/>
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="这里是小标题"/>
     </LinearLayout>
     <include layout="@layout/subview_recycle_noteandarticle"></include>
 </LinearLayout>

@@ -18,5 +18,4 @@ public abstract class MyBaseAotuPagerAdapter<T> extends MyBasePagerAdapter<T>{
         this.inflater = LayoutInflater.from(context);
         this.views=views;
     }
-
 }

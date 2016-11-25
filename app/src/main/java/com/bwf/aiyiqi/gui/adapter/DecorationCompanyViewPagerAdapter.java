@@ -18,7 +18,7 @@ import java.util.List;
 public class DecorationCompanyViewPagerAdapter extends MyBaseAotuPagerAdapter<ResponseFlashView.DataBean> {
 
     public DecorationCompanyViewPagerAdapter(Context context, List<View> views) {
-        super(context, views);
+        super(context,views);
     }
 
     @Override

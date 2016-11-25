@@ -21,17 +21,17 @@ public class MainRecyclePresenterImpl implements MainRecyclePresenter {
 
     @Override
     public void loadDatas() {
-        modle.loadDatas(Apis.ARTICLE, new MainRecycleModle.MainRecycleCallBack() {
-            @Override
-            public void onSuccess(String response) {
-                view.showMainSuccess(response);
-            }
-
-            @Override
-            public void onFaild(Exception e) {
-                view.showMainFaild(e);
-            }
-        });
+//        modle.loadDatas(Apis.ARTICLE, new MainRecycleModle.MainRecycleCallBack() {
+//            @Override
+//            public void onSuccess(String response) {
+//                view.showMainSuccess(response);
+//            }
+//
+//            @Override
+//            public void onFaild(Exception e) {
+//                view.showMainFaild(e);
+//            }
+//        });
 
         modle.loadPagers(Apis.AUTOPAGER, new MainRecycleModle.MainRecycleCallBack() {
             @Override

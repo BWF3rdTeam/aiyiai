@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mainCtvMine.setOnClickListener(this);
     }
 
-    @Override
+   @Override
     protected void initDatas() {
 
     }
